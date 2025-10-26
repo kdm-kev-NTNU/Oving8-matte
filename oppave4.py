@@ -19,7 +19,7 @@ def gradientmetode(x0):
     while not ferdig: 
         nyGradient = gradient(x)
         feil = abs(nyGradient)
-        x = x - stegLengde * nyGradient
+        x = x - stegLengde * nyGradient  #xk+1 = xk -a*Pk
         antallSteg = antallSteg + 1
         print(f"Steg: {antallSteg}, x = {x}")
     
@@ -30,7 +30,7 @@ def gradientmetode(x0):
 
     return x
 
-x0 = -3
+x0 = -1
 x = gradientmetode(x0)
 fun = f(x)
 print(f"Med x0 = {x0} får vi svaret x = {x}, med funksjonsverdi f(x) = {fun}")
